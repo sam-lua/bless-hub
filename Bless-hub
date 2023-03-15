@@ -1,88 +1,90 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Bless hub", "DarkTheme")
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+--window
+local Window = OrionLib:MakeWindow({Name = "Bless hub", HidePremium = false, SaveConfig = true, ConfigFolder = "Blessings"})
 
---Main section
- local Main = Window:NewTab("Home")
- local MainSection = Main:NewSection("Info")
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Home"
+})
+Tab:AddButton({
+	Name = "Info about bless hub.",
+	Callback = function()
+      loadstring(game:HttpGet('https://pastebin.com/raw/3wk8tRXP'))()
+   end
+})
+Tab:AddButton({
+	Name = "Get user id.",
+	Callback = function()
+      loadstring(game:HttpGet('https://pastebin.com/raw/DAFxUTnZ'))()
+   end
+})
+Tab:AddButton({
+	Name = "get creator info",
+	Callback = function()
+      loadstring(game:HttpGet('https://pastebin.com/raw/VZ6JqYVt'))()
+   end
+})
+local Tab = Window:MakeTab({
+	Name = "Game hub",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
- MainSection:NewButton("Get info about Bless hub", "Just read the title dumbass", function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/3wk8tRXP'))()
-end)
---Second section
-local SecondSection = Main:NewSection("Creator and user Info")
+Tab:AddButton({
+	Name = "Owl Hub",
+	Callback = function()
+      loadstring(game:HttpGet("https://athoi21.xyz/owlhub"))() 
+   end
+})
 
---first button in Second section
-    SecondSection:NewButton("Get creator roblox user", "Gives you the creator of the gui username ", function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/VZ6JqYVt'))()
-    end)
+Tab:AddButton({
+	Name = "Dark hub",
+	Callback = function()
+      loadstring(game:HttpGet("https://darkhub.xyz/remote-script.lua"))() 
 
-    --Second button in Second section
-    SecondSection:NewButton("Get creator user id", "Gives you your roblox user id", function()
-        loadstring(game:HttpGet('https://pastebin.com/raw/DAFxUTnZ'))()
-        end)
-   
---Other
-    local Other = Window:NewTab("Admin")
-    local OtherSection = Other:NewSection("Admin hubs")
+   end
+})
+Tab:AddButton({
+	Name = "Build a boat for treasure",
+	Callback = function()
+      loadstring(game:HttpGet("https://snowhub.dev/script.lua"))() 
+   end
+})
 
-    OtherSection:NewButton("Infinite yield", "Runs Infinite yield", function()
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
-    end)
+Tab:AddButton({
+	Name = "Build a boat for treasure",
+	Callback = function()
+       loadstring(game:HttpGet(('https://narwhalhacks.xyz/scripts/Arsenal.lua'),true))()
+   end
+})
 
-    OtherSection:NewButton("CMD X", "Like the other one pretty much just runs CMD x", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source"))() 
+local Tab = Window:MakeTab({
+	Name = "Admin",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
-        Fly(true)
-    end)
-    
-    --Other
-    local Other = Window:NewTab("Game hubs")
-    local OtherSection = Other:NewSection("Hubs")
+Tab:AddButton({
+	Name = "Infinite yield",
+	Callback = function()
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+   end
+})
 
-    OtherSection:NewButton("Arsenal", "Runs a arsenal script", function()
-        loadstring(game:HttpGet(('https://narwhalhacks.xyz/scripts/Arsenal.lua'),true))()
-    end)
+Tab:AddButton({
+	Name = "Cmd x",
+	Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source"))() 
+   end
+})
 
-    OtherSection:NewButton("Snowhub or babft gui", "Runs a babft script", function()
-        loadstring(game:HttpGet("https://snowhub.dev/script.lua"))() 
 
-    end)
-    
-     OtherSection:NewButton("Dark hub", "Runs dark hub", function()
-        loadstring(game:HttpGet("https://darkhub.xyz/remote-script.lua"))() 
-
-    end)
-    
-     OtherSection:NewButton("Owl hub", "Runs Owl hub", function()
-        loadstring(game:HttpGet("https://athoi21.xyz/owlhub"))() 
-
-    end)
-    
-    OtherSection:NewButton("More coming soon!", "Work in progress", function()
-        loadstring(game:HttpGet("nothing.com"))() 
-
-    end)
-    
-    --Other
-    local Other = Window:NewTab("Creds")
-    local OtherSection = Other:NewSection("desin and programming")
-
-    OtherSection:NewButton("Programmed by disabled_user_798722#3742", "", function()
-        loadstring(game:HttpGet((''),true))()
-    end)
-
-    OtherSection:NewButton("Designed by disabled_user_798722#3742 ", "", function()
-        loadstring(game:HttpGet(""))() 
-        end)
-        
-          OtherSection:NewButton("2nd programmer and Helper whatsup#4852 ", "", function()
-        loadstring(game:HttpGet(""))() 
-        end)
-
- --Other
-    local Other = Window:NewTab("Coming soon!")
-    local OtherSection = Other:NewSection("desin and programming")
-
-    OtherSection:NewButton("No touching hint its a button with them-", "", function()
-        loadstring(game:HttpGet((''),true))()
-    end)
+local Tab = Window:MakeTab({
+	Name = "More is coming soon!",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
