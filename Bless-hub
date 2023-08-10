@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 --window
-local Window = OrionLib:MakeWindow({Name = "Bless hub", HidePremium = false, SaveConfig = true, ConfigFolder = "Blessings"})
+local Window = OrionLib:MakeWindow({Name = "S deserves V", HidePremium = false, SaveConfig = true, ConfigFolder = "Blessings"})
 
 local Tab = Window:MakeTab({
 	Name = "Main",
